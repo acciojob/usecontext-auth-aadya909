@@ -1,13 +1,16 @@
-
 import React from "react";
-import './../styles/App.css';
+import Auth from "./Auth";
+import { AuthProvider } from "./AuthContext";
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+    <AuthProvider>
+      <div style={{ padding: "2rem", fontFamily: "Arial" }}>
+        <Auth />
+      </div>
+    </AuthProvider>
+  );
+};
 
-export default App
+export default App;
+
